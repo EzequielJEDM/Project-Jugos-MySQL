@@ -1,10 +1,3 @@
-/* EN ESTE ARCHIVO ENCONTRARÁS TODOS LOS COMANDOS UTILIZADOS A LO LARGO DE NUESTRO ENTRENAMIENTO.
-
-POR AHORA, TE INVITO A PREPARAR TU AMBIENTE PARA QUE COMIENCES A TRABAJAR.
-
-¡MUCHOS ÉXITOS EN TUS ESTUDIOS! */
-
--- PROYECTO DEL AULA ANTERIOR 1
 
 CREATE TABLE clientes (
 DNI VARCHAR(11) NOT NULL,
@@ -57,9 +50,6 @@ FOREIGN KEY (NUMERO) REFERENCES facturas(NUMERO),
 FOREIGN KEY (CODIGO) REFERENCES productos(CODIGO)
 );
 
-/*('3623344710', 'Marcos Rosas', 'Av. Universidad', 'Del Valle', 
-'Ciudad de México', 'EM', '22002012', '1995-01-13', 26, 'M', 
-110000, 220000, 1); */
 
 INSERT INTO clientes VALUES('3623344710', 'Marcos Rosas', 'Av. Universidad',
 'Del Valle', 'Ciudad de México', 'EM', '22002012', '1995-01-13', 26, 'M',
@@ -102,10 +92,6 @@ INNER JOIN
 items I
 ON F.NUMERO = I.NUMERO;
 
-
---PROYECTO DEL AULA ANTERIOR 2
-
-
 -- MIN = 20 Y MAX= 250
 -- (RAND() * (MAX-MIN+1))+MIN
 
@@ -125,10 +111,6 @@ SELECT FLOOR((RAND() * (max-min+1))+min) INTO vresultado;
 RETURN vresultado;
 END$$
 DELIMITER ;
-
-
---PROYECTO DEL AULA ANTERIOR 3
-
 
 SELECT COUNT(*) FROM clientes;
 
@@ -189,10 +171,6 @@ SELECT MATRICULA INTO vresultado FROM vendedores LIMIT valeatorio,1;
 RETURN vresultado;
 END$$
 DELIMITER ;
-
-
--- PROYECTO DEL AULA ANTERIOR 4
-
 
 SELECT f_cliente_aleatorio() AS CLIENTE, 
 f_producto_aleatorio() AS PRODUCTO,
@@ -269,7 +247,7 @@ END WHILE;
 END $$
 
 
--- PROYECTO FINAL
+--FINAL
 
 
 DELIMITER $$
